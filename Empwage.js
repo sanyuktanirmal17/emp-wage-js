@@ -7,6 +7,7 @@
 console.log("Welcome to EmployeeWage Computation Program")
 /**
  * Check for employee 
+ * 
  */
 const IS_ABSENT = 0;
 var empCheck = Math.floor(Math.random() * 10);
