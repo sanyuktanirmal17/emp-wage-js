@@ -4,7 +4,6 @@
  * @since : 10/7/2021
  */
 
-console.log("Welcome to EmployeeWage Computation Program")
 /**
  * Daily wage of employee
  */
@@ -16,16 +15,21 @@ console.log("Welcome to EmployeeWage Computation Program")
 
  let empHrs = 0;
  /**
-  * Calculate emp wage for part time
+  * Calculate emp wage using case
   */
  let empCheck = Math.floor(Math.random() * 10) % 3;
- if(empCheck == IS_FULL_TIME){
-     console.log("Employee is Full Time")
- } if (empCheck == IS_PART_TIME) {
-     console.log("Employee is Part Time")
- } else {
-     console.log("Employee is ABSENT")
- }
+ switch(empCheck){
+    case 1:
+        empHrs = PART_TIME_HOURS;
+        break;
+    case 2:
+        empHrs = FULL_TIME_HOURS;
+        break;
+        default:
+            empHrs = 0;
+}
+let empWage = empHrs * WAGE_PER_HOUR;
+console.log("Employee Wage:" + empWage);
+
+
  
- let empWage = empCheck * WAGE_PER_HOUR;
- console.log("Employee Wage:" + empWage)
